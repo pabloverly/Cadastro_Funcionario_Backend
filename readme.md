@@ -1,5 +1,4 @@
 
-
 ## Estrutura 
 
 ### FUNCIONARIO
@@ -13,12 +12,14 @@
 	  DataCadastro  DATE   NOT NULL,
 	  DataAlteracao DATE  NULL,
 	  DataExclusao  DATE  NULL
-	 )```
+	 )
+```
 	  	
 	 
 ```ALTER TABLE FUNCIONARIO ADD
 CONSTRAINT UltilizaVT_CK 
-CHECK ( UltilizaVT IN ('S', 'N'));```
+CHECK ( UltilizaVT IN ('S', 'N'));
+```
 
  
 ```CREATE SEQUENCE FUNCIONARIO_id
@@ -40,12 +41,10 @@ SQL Error [2269] [42000]: ORA-02269: a coluna-chave não pode ser do tipo de dad
 	  DataCadastro  DATE  NOT NULL,
 	  DataAlteracao DATE  NULL,
 	  DataExclusao  DATE  NULL
-	 )```
+	 )
+	 ```
 	 
 ```ALTER TABLE FUNCIONARIO
 ADD CargoId NUMBER(8,0)  CONSTRAINT CargoId_FK 
-REFERENCES CARGO(Id);```
-
-
-	 
-	 
+REFERENCES CARGO(Id);
+```
