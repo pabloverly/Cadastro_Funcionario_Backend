@@ -24,10 +24,21 @@ module.exports = {
     //await insert.insertTable(); 
   
     // The statement to execute
-    const sql =  ` select * from FUNCIONARIO` //`SELECT   ID,TITLE,DESCRIPTION,ONG_ID  FROM   DBATI.incidents`;
-       // `SELECT nome, data, setor
-       //  FROM usuario
-       //  ORDER BY cd_usuario`;
+    const sql =  ` SELECT
+    F.ID ,
+    F.NOME ,
+    F.CPF ,
+    F.DATAADMISSAO,
+    F.ULTILIZAVT ,
+    F.DATACADASTRO ,
+    F.DATAALTERACAO,
+    F.DATAEXCLUSAO ,
+    C.NOME AS FUNCAO
+  FROM
+    FUNCIONARIO F,
+    CARGO C
+  WHERE
+    C.id = F.CARGOID` 
 
     let result;
 
