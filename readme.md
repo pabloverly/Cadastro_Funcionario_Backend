@@ -1,8 +1,8 @@
-Obs.:
-SQL Error [2269] [42000]: ORA-02269: a coluna-chave não pode ser do tipo de dados LONG
 
 
+## Estrutura 
 
+### FUNCIONARIO
    CREATE TABLE FUNCIONARIO (
 	  Id            NUMBER(8,0)  PRIMARY KEY NOT NULL,
 	  Nome          VARCHAR2(250)          NOT NULL,
@@ -21,7 +21,7 @@ SQL Error [2269] [42000]: ORA-02269: a coluna-chave não pode ser do tipo de dad
 	CHECK ( UltilizaVT IN ('S', 'N'));
 
 
-
+ 
 CREATE SEQUENCE FUNCIONARIO_id
   MINVALUE 1
   MAXVALUE 999999999999999999999999999
@@ -30,20 +30,11 @@ CREATE SEQUENCE FUNCIONARIO_id
   NOORDER
   NOCACHE
 /
+Obs.:
+SQL Error [2269] [42000]: ORA-02269: a coluna-chave não pode ser do tipo de dados LONG
 
- INSERT INTO FUNCIONARIO (Id,Nome,CPF,DataAdmissao, UltilizaVT, DataCadastro, DataAlteracao, DataExclusao)
-	 VALUES (FUNCIONARIO_id.nextval , 'PABLO','09978082760',SYSDATE, 'S', SYSDATE, NULL, NULL)
+### CARGO 
 	 
-	  INSERT INTO FUNCIONARIO (Id,Nome,CPF,DataAdmissao, UltilizaVT, DataCadastro, DataAlteracao, DataExclusao)
-	 VALUES (1, 'PABLO','09978082760','06/03/2022', 'S', '06/03/2022', NULL, NULL)
-	 
-	 SELECT * FROM FUNCIONARIO f 
-	 
-	 
-	 
-   DROP TABLE CARGO
-
-
    CREATE TABLE CARGO (
 	  Id            NUMBER(8,0) primary key,	 
 	  Nome          VARCHAR2(250)          NOT NULL,	
