@@ -12,8 +12,7 @@ CREATE TABLE FUNCIONARIO (
 	  UltilizaVT 	char(1) DEFAULT 'N'   NOT NULL,
 	  DataCadastro  DATE   NOT NULL,
 	  DataAlteracao DATE  NULL,
-	  DataExclusao  DATE  NULL
-	 )
+	  DataExclusao  DATE  NULL)
 ```
 	  	
 	 
@@ -44,13 +43,11 @@ SQL Error [2269] [42000]: ORA-02269: a coluna-chave não pode ser do tipo de dad
 	  Nome          VARCHAR2(250)          NOT NULL,	
 	  DataCadastro  DATE  NOT NULL,
 	  DataAlteracao DATE  NULL,
-	  DataExclusao  DATE  NULL
-	 )
-	 ```
+	  DataExclusao  DATE  NULL )
+```
 	 
 ```
 ALTER TABLE FUNCIONARIO
 ADD CargoId NUMBER(8,0)  CONSTRAINT CargoId_FK 
 REFERENCES CARGO(Id);
-
 ```
